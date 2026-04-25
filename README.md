@@ -1,20 +1,32 @@
-🧾 Customer & Payment System (FastAPI)
+# 🧾 Customer & Payment System (FastAPI)
 
-Jednoduchý backend projekt pro správu zákazníků, jejich služeb a kontrolu plateb (např. podle variabilního symbolu).
+Jednoduchý backend projekt pro správu zákazníků, jejich služeb a kontrolu plateb.
 
-🚀 Funkce
-správa zákazníků
-definice služeb (např. doména, internet)
-přiřazení služby zákazníkovi
-generování variabilního symbolu
-příprava na párování plateb z banky
-🧱 Technologie
-Python
-FastAPI
-SQLAlchemy
-SQLite
-Uvicorn
-📁 Struktura projektu
+---
+
+## 🚀 Funkce
+
+* správa zákazníků
+* definice služeb (např. doména, internet)
+* přiřazení služby zákazníkovi
+* generování variabilního symbolu
+* příprava na párování plateb
+
+---
+
+## 🧱 Technologie
+
+* Python
+* FastAPI
+* SQLAlchemy
+* SQLite
+* Uvicorn
+
+---
+
+## 📁 Struktura projektu
+
+```
 app/
 ├── main.py
 ├── database.py
@@ -24,68 +36,125 @@ app/
     ├── customers.py
     ├── services.py
     └── customer_services.py
-⚙️ Instalace
+```
+
+---
+
+## ⚙️ Instalace
+
+```bash
 python -m venv .venv
-source .venv/bin/activate   # Linux
-# nebo
-.venv\Scripts\activate      # Windows
+
+# Linux
+source .venv/bin/activate
+
+# Windows
+.venv\Scripts\activate
 
 pip install -r requirements.txt
-▶️ Spuštění
+```
+
+---
+
+## ▶️ Spuštění
+
+```bash
 uvicorn app.main:app --reload
+```
 
 API poběží na:
 
+```
 http://127.0.0.1:8000
+```
 
 Dokumentace:
 
+```
 http://127.0.0.1:8000/docs
-🗄️ Databáze
+```
 
-Používá se SQLite (soubor customers.db).
+---
+
+## 🗄️ Databáze
+
+Používá se SQLite (soubor `customers.db`).
 
 Tabulky:
 
-customers – zákazníci
-services – typy služeb
-customer_services – přiřazené služby zákazníkům
-payments – přijaté platby
-🔢 Variabilní symbol
+* `customers`
+* `services`
+* `customer_services`
+* `payments`
+
+---
+
+## 🔢 Variabilní symbol
 
 Každá služba zákazníka má unikátní variabilní symbol:
 
+```
 [service_code][customer_service_id]
+```
 
 Příklad:
 
+```
 1000000001
-10 = typ služby
-00000001 = ID záznamu
-📡 API endpointy
-Zákazníci
+```
+
+---
+
+## 📡 API endpointy
+
+### Zákazníci
+
+```
 GET     /customers
 POST    /customers
 GET     /customers/{id}
 DELETE  /customers/{id}
-Služby
+```
+
+### Služby
+
+```
 GET     /services
 POST    /services
-Služby zákazníků
+```
+
+### Služby zákazníků
+
+```
 GET     /customer-services
 POST    /customer-services
-Zákazník + služby
-GET /customers/{id}/services
-🧠 Budoucí rozšíření
-párování plateb z banky (API)
-kontrola zaplaceno / nezaplaceno
-frontend (HTML / JS)
-autentizace (login)
-Docker nasazení
-⚠️ Poznámky
-projekt je určen primárně pro lokální použití / učení
-neřeší bezpečnost (zatím)
-databáze se při změně modelu smaže a vytvoří znovu
-👨‍💻 Autor
+```
 
-David 😄
+### Zákazník + služby
+
+```
+GET /customers/{id}/services
+```
+
+---
+
+## 🧠 Budoucí rozšíření
+
+* párování plateb z banky
+* kontrola zaplaceno / nezaplaceno
+* jednoduchý frontend
+* autentizace
+* Docker
+
+---
+
+## ⚠️ Poznámky
+
+* projekt je určen primárně pro lokální použití
+* databáze se při změně modelu maže
+
+---
+
+## 👨‍💻 Autor
+
+Gary 😄
