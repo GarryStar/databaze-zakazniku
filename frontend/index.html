@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Zákazníci</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Databáze zákazníků</h1>
+
+    <div class="container">
+
+        <!-- FORMULÁŘ -->
+        <div class="form-box">
+            <h2>Přidat zákazníka</h2>
+
+            <form id="customerForm">
+                <input type="text" id="first_name" placeholder="Jméno" required>
+                <input type="text" id="last_name" placeholder="Příjmení" required>
+                <input type="text" id="street" placeholder="Ulice">
+                <input type="text" id="house_number" placeholder="Číslo popisné">
+                <input type="text" id="city" placeholder="Město">
+                <input type="text" id="postal_code" placeholder="PSČ">
+
+                <input type="text" id="email" placeholder="Email">
+                <input type="text" id="phone" placeholder="Telefon">
+                <input type="text" id="bank_account" placeholder="Číslo účtu">
+
+                <button type="submit">Uložit</button>
+            </form>
+        </div>
+
+        <!-- VÝPIS -->
+        <div class="list-box">
+            <h2>Seznam zákazníků</h2>
+            <ul id="customerList"></ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

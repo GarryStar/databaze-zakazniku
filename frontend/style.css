@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* HLAVNÍ ROZLOŽENÍ */
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+/* FORMULÁŘ */
+.form-box {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* SEZNAM */
+.list-box {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* INPUTY */
+form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+/* TLAČÍTKO */
+button {
+    padding: 10px;
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* POLOŽKY SEZNAMU */
+#customerList li {
+    background: #eee;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+}
